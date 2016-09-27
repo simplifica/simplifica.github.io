@@ -49,7 +49,7 @@ $(document).ready(function() {
 			  slideSpeed : 1000,
 			  paginationSpeed : 1000,
 			  singleItem:true,
-			  autoPlay:1000,
+			  autoPlay:10000,
 			  afterMove: teste
 		});
 
