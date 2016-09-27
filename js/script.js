@@ -46,10 +46,10 @@ $(document).ready(function() {
 		// OwlCarousel N2
 		var owlDemo1 = $("#owl-demo-1").owlCarousel({
 			  navigation : false, // Show next and prev buttons
-			  slideSpeed : 10000,
+			  slideSpeed : 1000,
 			  paginationSpeed : 1000,
 			  singleItem:true,
-			  autoPlay:10000,
+			  autoPlay:1000,
 			  afterMove: teste
 		});
 
