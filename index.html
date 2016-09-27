@@ -218,7 +218,7 @@
 							<button type="button "><span>Clique aqui para testar</span></button>
 							<div class="morph-content">
 								<div>
-									<div class="content-style-form content-style-form-4 ">
+									<div id='container-quero-participar' class="content-style-form content-style-form-4 ">
 										<h2 class="morph-clone">Quero testar</h2>
 										<form>
 											<p><label>Nome</label>
@@ -228,6 +228,9 @@
 											<p><button id="btn-subscribe">Confirmar</button></p>
 										</form>
 									</div>
+									<div id='thankyou' class="content-style-form content-style-form-4 ">
+										<h2 class="morph-clone">Parabéns</h2>
+									</div>									
 								</div>
 							</div>
 						</div>
@@ -281,6 +284,7 @@
 	  }
 	  jQuery(function($) {
 		$(document).ready( function() {
+			$("#thankyou").hide();
 			var opt =  {
 			  onChange: function(cep) {
 			    alert("CEP Completed!:");
@@ -318,6 +322,9 @@
 	        	mixpanel.identify(fone);
 	        	mixpanel.people.set({$name:nome,$phone:fone});
 	        	mixpanel.identify();
+	        	$("#container-quero-participar").hide(200);
+	        	$("#thankyou").show(200);
+	        	
 	        });
 
 		});
