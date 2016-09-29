@@ -204,7 +204,31 @@
 			</div>
         </div>
     </div>
+	<div id="cidades" class="content-section-a" style="border-top: 0">
+		<div class="container">
 
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h3>Cidades com cobertura do serviço</h3>
+				
+			</div>
+			
+			<div class="row">
+			
+				<div class="col-sm-8 col-sm-offset-2 wow fadeInDown text-center">
+				  <div class="item">
+				  <img  class="rotate" src="img/city.svg" alt="Generic placeholder image" width="100px" >
+				  </div>
+				   <h3>Vamos começar em Brusque</h3>
+					<p class="lead">Mas logo chegaremos aí na sua cidade. Quer ver? Clica aqui em baixo</p>
+				  <p><a id="btn-quero-na-minha-cidade" class="btn btn-embossed btn-primary view" role="button">Quero!</a></p> 
+				  <img id="img-quero-na-minha-cidade" class="rotate" src="img/icon/heart.svg" alt="Generic placeholder image" width="100px" >
+				</div><!-- /.col-lg-4 -->
+				
+			</div><!-- /.row -->
+				
+
+		</div>
+	</div>
 	<div  id="subscribe" class="content-section-c ">
 		<div class="container">
 			<div class="row">
@@ -311,7 +335,10 @@
 	  }
 	  jQuery(function($) {
 		$(document).ready( function() {
+
 			$("#thankyou").hide();
+			$("#img-quero-na-minha-cidade").hide();
+			
 			var opt =  {
 			  onChange: function(cep) {
 			    alert("CEP Completed!:");
@@ -353,6 +380,12 @@
 	        	$("#container-quero-participar").hide(200);
 	        	$("#thankyou").show(200);
 	        	
+	        });
+
+	        $("#btn-quero-na-minha-cidade").on('click',function(){
+	        	mixpanel.track("quero");
+	        	$("#btn-quero-na-minha-cidade").hide(100);
+	        	$("#img-quero-na-minha-cidade").show(300);
 	        });
 
 		});
